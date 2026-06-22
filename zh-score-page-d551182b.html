@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>球探比分 · 赛事数据与实时比分参考</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fafaf9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1c1c1e;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* header / hero */
+    .hero {
+      padding: 3.5rem 0 2.5rem 0;
+      border-bottom: 1px solid #e6e4e0;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #121213;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #4a4a4c;
+      max-width: 580px;
+    }
+
+    /* section 通用 */
+    section {
+      margin: 3.2rem 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      border-left: 4px solid #d6d3cd;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      color: #1e1e1f;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #2c2c2e;
+    }
+
+    a {
+      color: #15607a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    a:hover {
+      border-bottom-color: #15607a;
+    }
+
+    /* 优势卡片——极简，留白为主 */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem 2rem;
+      margin: 1.8rem 0 0.5rem 0;
+    }
+
+    .feature-item {
+      flex: 1 1 200px;
+      background: #ffffff;
+      padding: 1.6rem 1.4rem;
+      border: 1px solid #ebebe8;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #1f1f21;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      color: #4a4a4c;
+    }
+
+    /* 说明区 — 列表式 */
+    .detail-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.2rem;
+    }
+
+    .detail-list li {
+      padding: 0.6rem 0 0.6rem 1.2rem;
+      position: relative;
+      color: #2e2e30;
+      border-bottom: 1px dashed #eae8e4;
+    }
+
+    .detail-list li:last-child {
+      border-bottom: none;
+    }
+
+    .detail-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #b0aca4;
+    }
+
+    /* faq 摘要 */
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #1d1d1f;
+      margin-bottom: 0.2rem;
+      font-size: 1.05rem;
+    }
+
+    .faq-a {
+      color: #4a4a4c;
+      font-size: 0.98rem;
+    }
+
+    .faq-a a {
+      font-weight: 400;
+    }
+
+    /* 底部 */
+    .footnote {
+      margin-top: 4rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e0ddd9;
+      font-size: 0.9rem;
+      color: #5f5e5b;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footnote p {
+      margin: 0.3rem 0;
+      color: #5f5e5b;
+    }
+
+    .small-link {
+      font-size: 0.9rem;
+      color: #3f3f41;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      body {
+        padding: 1.2rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .features {
+        gap: 1rem;
+      }
+
+      .feature-item {
+        flex: 1 1 100%;
+        padding: 1.2rem 1rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- hero 区 -->
+  <header class="hero">
+    <h1>球探比分 · 赛事数据参考</h1>
+    <p>
+      面向关注足球比赛进程的用户，<a href="https://zh-score-qiutan.com">球探比分</a>
+      提供实时比分、赛程信息以及基础数据呈现，帮助用户快速了解场上动态。
+    </p>
+  </header>
+
+  <!-- 优势区 核心特点 -->
+  <section>
+    <h2>页面特点与呈现方式</h2>
+    <div class="features">
+      <div class="feature-item">
+        <strong>实时比分更新</strong>
+        <p>覆盖主流联赛与杯赛，页面以列表方式展示当前进行中的赛事，便于一眼获取比分变化。</p>
+      </div>
+      <div class="feature-item">
+        <strong>赛程与数据</strong>
+        <p>除即时比分外，也可查阅临近赛程、历史对阵及基础统计，辅助赛前分析。</p>
+      </div>
+      <div class="feature-item">
+        <strong>简洁界面</strong>
+        <p>信息层级清晰，不堆砌复杂图表，降低阅读负担，适合快速浏览比分。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明区 内容扩展 -->
+  <section>
+    <h2>常见使用场景</h2>
+    <ul class="detail-list">
+      <li>比赛日实时追踪：通过 <a href="https://zh-score-qiutan.com">球探比分</a> 查看正在进行中的比赛，包括进球、红黄牌及换人动态。</li>
+      <li>赛前参考：浏览未来两日的赛程安排，提前了解对阵双方及开赛时间。</li>
+      <li>赛后回顾：查阅已结束比赛的最终比分及简要数据，如控球率、射门次数等。</li>
+      <li>多联赛切换：支持页面内切换联赛或杯赛，关注特定赛事比分。</li>
+    </ul>
+    <p style="margin-top: 1.6rem;">
+      页面数据源自公开赛事接口，信息仅供参考。比赛过程中数据可能存在延迟，最终结果以官方公布为准。
+    </p>
+  </section>
+
+  <!-- FAQ 摘要 -->
+  <section>
+    <h2>常见问题摘要</h2>
+    <div class="faq-grid">
+      <div>
+        <div class="faq-q">数据更新时间是多久？</div>
+        <div class="faq-a">通常情况下，比分数据在进球或关键事件发生后数十秒内刷新。受网络与数据传输影响，不同比赛可能存在差异。</div>
+      </div>
+      <div>
+        <div class="faq-q">是否覆盖所有足球赛事？</div>
+        <div class="faq-a">主要覆盖欧洲主流联赛、亚洲及美洲部分联赛，以及世界杯、欧冠等杯赛。具体赛事列表请以实际页面显示为准。</div>
+      </div>
+      <div>
+        <div class="faq-q">页面显示的数据来自哪里？</div>
+        <div class="faq-a">数据来源为第三方体育数据服务商，页面仅做整理与展示。使用 <a href="https://zh-score-qiutan.com">球探比分</a> 即表示理解数据可能存在误差。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部链接与说明 -->
+  <footer class="footnote">
+    <div>
+      <p>© 球探比分 · 信息参考页</p>
+      <p class="small-link">数据仅供个人参考，不构成投注或决策建议。</p>
+    </div>
+    <div>
+      <a href="https://zh-score-qiutan.com" class="small-link">球探比分</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
